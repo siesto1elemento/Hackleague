@@ -1,0 +1,159 @@
+body{
+    background-color:black;
+    color: #fff;
+}
+p{
+    margin: 0px;
+}
+.header{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family:cursive;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5); /* Set the background color with opacity */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+   
+}
+.posting_link{
+    border: #fff;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    font-size: x-medium;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2px;
+}
+.hackathon-container {
+    background-color: #7891a1;
+    border: 1px solid #d3d3d3;
+    padding-bottom: 3px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff; /* Set text color to white */
+}
+
+.apply-button {
+    margin-top: 15px;
+}
+
+.theme-result {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.middle{
+    margin-bottom: 20px;
+}
+
+.middle_h1{
+    text-align: center;
+    font-size: xx-large;
+    word-spacing:5px ;
+    text-shadow: 
+        1px 1px 0 white,  /* Top-right */
+        -1px -1px 0 white, /* Bottom-left */
+        1px -1px 0  white,  /* Bottom-right */
+        -1px 1px 0  white; 
+    padding: 20px;
+}
+.middle_h1_span{
+    text-decoration-style: dotted;
+    text-decoration-line: underline;
+}
+
+
+h2{
+    font-size: large;
+    padding: 5px;
+    padding-left: 5px;
+    
+}
+.subscribe{
+    text-align: center;
+    margin-bottom: 20px;
+}
+input::placeholder {
+    font: 20px Franklin Gothic 300;
+    font-weight: 100;
+}
+input{
+    width: 300px;
+    height:30px ;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px;
+    border-color: #343434;
+
+}
+input:focus
+{
+    outline: none !important;
+    border-color: #e9e5e5;
+}
+
+.subscribe button{
+    border-radius: 5px;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    cursor: pointer;
+}
+
+.hackathons{
+    display: flex;
+    justify-content: space-between;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid rgb(38, 38, 38);
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px ;
+    padding-bottom:15px ;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+.theme{
+    border:2px solid rgb(53, 53, 53);
+    padding: 0px;
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size:12px;
+    line-height:1 ;
+
+}
+
+
+
+.heading{
+    font-weight: 500;
+}
+
+.website{
+    font-size: 10px;
+}
+
+
