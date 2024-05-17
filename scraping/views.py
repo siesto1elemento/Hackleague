@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from bs4 import BeautifulSoup
 import requests
@@ -24,8 +25,12 @@ def hackathon_view(request):
             'theme_result': theme_result,
             'link':link,
         })
+    
+    paginator = Paginator(hackathon_data, 10)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
 
-    context = {'hackathons': hackathon_data, 'website':website}
+    context = {'page_obj': page_obj, 'website':website}
     return render(request, 'home.html', context)
 
 
