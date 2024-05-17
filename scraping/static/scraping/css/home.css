@@ -156,3 +156,60 @@ input:focus
     font-size: 10px;
     font-weight: 500;
 }
+
+
+/* External CSS for Pagination Links */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.pagination .step-links {
+    display: flex;
+    align-items: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 3px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #100f0f;
+    border: 2px solid #3f4041;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+.pagination .current {
+    padding: 5px 10px;
+    margin: 0 5px;
+    color: #ffffff;
+    background-color: #252525;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.pagination a:first-child {
+    margin-right: auto;
+}
+
+.pagination a:last-child {
+    margin-left: auto;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    color: #6c757d;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
