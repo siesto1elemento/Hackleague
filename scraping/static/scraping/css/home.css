@@ -179,22 +179,22 @@ input:focus
     margin: 0 5px;
     text-decoration: none;
     color: #ffffff;
-    background-color: #100f0f;
-    border: 2px solid #3f4041;
+    background-color: #000000;
+    border: 1px solid #323333;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pagination a:hover {
     background-color: #e9ecef;
-    color: #0056b3;
+    color: #000000;
 }
 
 .pagination .current {
     padding: 5px 10px;
     margin: 0 5px;
     color: #ffffff;
-    background-color: #252525;
+    background-color: #111111;
     border: 1px solid #dee2e6;
     border-radius: 4px;
 }
