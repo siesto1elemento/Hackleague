@@ -213,3 +213,24 @@ input:focus
     background-color: #e9ecef;
     border-color: #dee2e6;
 }
+
+.search{
+    margin-left:20%;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+}
+
+.search_submit{
+    background-color: #ffffff;
+    color: #000000;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: left 4px;
+    padding-right:4px;
+    padding-top:0px;
+    padding-bottom:0px;  
+    line-height: 1px; 
+}
