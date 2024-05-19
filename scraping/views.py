@@ -1,6 +1,10 @@
 from django.core.paginator import Paginator
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .utils import hackathon_
+from django.core.mail import send_mail
+
+
+
 
 def hackathon_view(request):
     
@@ -26,6 +30,14 @@ def search_view(request):
         
         return render(request, 'search.html', {'hackathon_data': new_hackathod_data})
         
+def send_mail_(request):
+    send_mail('Hey, Sending from rohit ojha',
+    'Hi this mail is coming from django',
+     'rohitojha9720@gmail.com',
+     ['kigav84683@lucvu.com'],fail_silently=False)
+    
+    return redirect('/') 
+
 
 
 

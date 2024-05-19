@@ -19,7 +19,7 @@
         <h1 class="middle_h1">FIND ALL THE HACKATHONS <br><span class="middle_h1_span">GOING ON</span> </h1>
     </div>
 
-        <form class="subscribe" action="">
+        <form class="subscribe" action="{% url 'send_mail' %}">
             <input type="text" placeholder="Get all hackthons in your inbox">
             <button>Subscribe</button>
         </form>
@@ -73,5 +73,9 @@
 
 </html>
 
+
  
     
+
+
+
