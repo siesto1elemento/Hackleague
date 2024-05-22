@@ -6,7 +6,7 @@ def hackathon_():
     url = f"https://{website}.co/hackathons"
     html = requests.get(url).text
     
-    soup = BeautifulSoup(html, 'lxml')
+    soup = BeautifulSoup(html, 'html.parser')
 
     hackathons = soup.find_all('div', class_='sc-dwVMhp fdwmgb CompactHackathonCard__StyledCard-sc-4a10fa2a-0 ihpCnk')
     hackathon_data = []

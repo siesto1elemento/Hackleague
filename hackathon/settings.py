@@ -139,5 +139,5 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 CRONJOBS = [
-    ('0 0 * * MON', 'scraping.tasks.send_weekly_email')
+    ('*/5 * * * *', 'scraping.cron.send_weekly_email')
 ]
