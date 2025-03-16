@@ -46,6 +46,13 @@ pip install -r requirements.txt
 ### **4. Apply Migrations**
 ```sh
 python manage.py migrate
+
+### **6. Run the Development Server**
+```sh
+python manage.py runserver
+```
+
+
 ```
 
 ### **5. Create a Superuser (Optional, for Admin Access)**
