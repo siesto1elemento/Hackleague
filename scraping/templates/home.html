@@ -33,15 +33,18 @@
     
     {% for hackathon in page_obj %}
         
-        <div class="hackathons">
-            <div>
-            <p class="website" >{{ website }}</p>
-            <p class="heading">{{ hackathon.heading }}</p>
+            <div class="hackathons">
+                <div>
+                <p class="website" >{{ website }}</p>
+                <a href="{{hackathon.link}}">
+                    <p class="heading">{{ hackathon.heading }}</p>
+                </a>
+                </div>
+                <div>
+                <p class="theme">{{ hackathon.theme_result }}</p>
+                </div>
             </div>
-            <div>
-            <p class="theme">{{ hackathon.theme_result }}</p>
-            </div>
-        </div>
+        
     
                 <!-- <h2>{{ hackathon.heading }}</h2> -->
                <!-- #<p class="text-muted theme-result">{{ hackathon.theme_result }}</p> -->

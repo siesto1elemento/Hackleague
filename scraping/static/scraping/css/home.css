@@ -146,11 +146,18 @@ input:focus
 
 }
 
-
-
 .heading{
     font-weight: 500;
+    color: white;
+    text-decoration: none;
+    
 }
+
+a:has(.heading){
+    text-decoration: none;
+}
+
+
 
 .website{
     font-size: 10px;

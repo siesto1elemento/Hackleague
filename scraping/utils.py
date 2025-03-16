@@ -14,7 +14,8 @@ def hackathon_():
         heading = hackathon.find('h3', class_='sc-hZgfyJ oSdsf')
         theme = hackathon.find('p', class_='sc-hZgfyJ hZQPen')
         theme_result = hackathon.find('div', class_='sc-hZgfyJ hZQPen')
-
+        link = hackathon.find('a', class_='Link__LinkBase-sc-e5d23d99-0 bnxtME')
+        link = link.get("href")
         heading = heading.text if heading else ""
         theme = theme.text if theme else ""
         theme_result = theme_result.text if theme_result else ""
@@ -25,6 +26,7 @@ def hackathon_():
             'heading': heading,
             'theme': theme,
             'theme_result': theme_result,
+            'link':link
         })
     
     
