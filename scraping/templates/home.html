@@ -31,24 +31,26 @@
     
     
     
-    {% for hackathon in page_obj %}
-        
+        {% for hackathon in page_obj %}
             <div class="hackathons">
                 <div>
-                <p class="website" >{{ website }}</p>
-                <a href="{{hackathon.link}}">
-                    <p class="heading">{{ hackathon.heading }}</p>
-                </a>
+                    <p class="website">{{ website }}</p>
+                    <a href="{{ hackathon.link }}">
+                        <p class="heading">{{ hackathon.heading }}</p>
+                    </a>
                 </div>
-                <div>
-                <p class="theme">{{ hackathon.theme_result }}</p>
+                <div class="tags">
+                    {% if hackathon.mode %}
+                        <span class="mode">{{ hackathon.mode }}</span>
+                    {% endif %}
+                    
+                    {% if hackathon.date %}
+                        <span class="date">{{ hackathon.date }}</span>
+                    {% endif %}
                 </div>
             </div>
-        
+        {% endfor %}
     
-                <!-- <h2>{{ hackathon.heading }}</h2> -->
-               <!-- #<p class="text-muted theme-result">{{ hackathon.theme_result }}</p> -->
-    {% endfor %}
 
     <br>
     <br>

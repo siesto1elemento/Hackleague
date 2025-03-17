@@ -16,9 +16,18 @@ def hackathon_():
         theme_result = hackathon.find('div', class_='sc-hZgfyJ hZQPen')
         link = hackathon.find('a', class_='Link__LinkBase-sc-e5d23d99-0 bnxtME')
         link = link.get("href")
+        if len(hackathon.find_all('p',class_='sc-hZgfyJ ifkmYk')) > 2:
+            mode = hackathon.find_all('p', class_='sc-hZgfyJ ifkmYk')[0]
+            date = hackathon.find_all('p',class_='sc-hZgfyJ ifkmYk')[2]
+        else:
+            mode = None
+            date = None
         heading = heading.text if heading else ""
         theme = theme.text if theme else ""
         theme_result = theme_result.text if theme_result else ""
+        mode = mode.text if mode else ""
+        date = date.text if date else ""
+
 
         
 
@@ -26,7 +35,9 @@ def hackathon_():
             'heading': heading,
             'theme': theme,
             'theme_result': theme_result,
-            'link':link
+            'link':link,
+            'mode':mode,
+            'date':date
         })
     
     
