@@ -227,52 +227,36 @@ p{
 }
 
 .apply-button {
-    margin-top: 20px;
-    display: inline-block;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
 }
 
 .apply-button a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--apply-button-bg);
+    background-color: transparent;
     color: var(--primary-color);
-    padding: 12px 28px;
-    border-radius: 8px;
+    padding: 6px 16px;
+    border-radius: 4px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    border: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border: 1px solid var(--primary-color);
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
 }
 
 .apply-button a:hover {
-    background-color: var(--apply-button-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-color);
+    color: var(--background-dark);
 }
 
 .apply-button a:active {
     transform: translateY(0);
-}
-
-/* Add a subtle animation for the button */
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
-    }
-}
-
-.apply-button a {
-    animation: pulse 2s infinite;
 }
 
 .theme-result {
@@ -285,7 +269,7 @@ p{
 }
 
 .middle{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .middle_h1{
@@ -294,7 +278,7 @@ p{
     font-size: xxx-large;
     word-spacing:5px ;
     padding: 20px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 .middle_h1_span{
     text-decoration-style: dotted;
@@ -310,6 +294,7 @@ h2{
 }
 .subscribe{
     text-align: center;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 input::placeholder {
@@ -360,45 +345,6 @@ input:focus
     flex: 1;
     text-decoration: none;
     color: inherit;
-}
-
-.apply-button {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-}
-
-.apply-button a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: var(--primary-color);
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.apply-button a:hover {
-    background-color: var(--primary-color);
-    color: var(--background-dark);
-    transform: translateY(-2px);
-}
-
-.apply-button a:active {
-    transform: translateY(0);
-}
-
-/* Remove the pulse animation */
-.apply-button a {
-    animation: none;
 }
 
 .theme{
@@ -531,10 +477,11 @@ a:has(.heading){
 /* Company Slider Styles */
 .company-slider {
     width: 100%;
-    padding: 30px 0;
-    background: rgba(255, 255, 255, 0.05);
-    margin: 20px 0;
+    padding: 20px 0;
+    margin-top: 20px;
     overflow: hidden;
+    position: relative;
+    background: var(--background-dark);
 }
 
 .slider-container {
@@ -590,12 +537,12 @@ a:has(.heading){
 
 .slider-container::before {
     left: 0;
-    background: linear-gradient(to right, var(--background-dark), transparent);
+    background: linear-gradient(to right, var(--background-dark) 0%, var(--background-dark) 50%, transparent 100%);
 }
 
 .slider-container::after {
     right: 0;
-    background: linear-gradient(to left, var(--background-dark), transparent);
+    background: linear-gradient(to left, var(--background-dark) 0%, var(--background-dark) 50%, transparent 100%);
 }
 
 /* Responsive adjustments */
