@@ -16,39 +16,79 @@
     </div>
 
     <div class="middle">
-        <h1 class="middle_h1">FIND ALL THE HACKATHONS <br><span class="middle_h1_span">GOING ON</span> </h1>
+        <h1 class="middle_h1">FIND ALL THE HACKATHONS <br><span class="middle_h1_span " id="changing-text"></span> </h1>
     </div>
 
-        <form class="subscribe" action="{% url 'send_mail' %}">
-            <input type="text" placeholder="Get all hackthons in your inbox" name="email">
-            <button>Subscribe</button>
-        </form>
+    <div class="company-slider">
+        <div class="slider-container">
+            <div class="slider-track">
+                <!-- First set of logos -->
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png" alt="Microsoft">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/1024px-Facebook_F_icon.svg.png" alt="Facebook">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/99/PayU_Corporate_Logo.png?20171204111956" alt="PayU">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png" alt="Google">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png" alt="Microsoft">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/1024px-Facebook_F_icon.svg.png" alt="Facebook">
+                </div>
+                <div class="slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/9/99/PayU_Corporate_Logo.png?20171204111956" alt="PayU">
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <form action="{% url 'search_results' %}" method="get">
-            <input class="search" name="search" type="text" placeholder="Search... and press Enter">
-        </form>
+    <form class="subscribe" action="{% url 'send_mail' %}">
+        <input type="text" placeholder="Get all hackthons in your inbox" name="email">
+        <button>Subscribe</button>
+    </form>
+
+    <form action="{% url 'search_results' %}" method="get">
+        <input class="search" name="search" type="text" placeholder="Search... and press Enter">
+    </form>
 
     
     
     
         {% for hackathon in page_obj %}
-            <div class="hackathons">
-                <div>
-                    <p class="website">{{ website }}</p>
+            
+                <div class="hackathons">
                     <a href="{{ hackathon.link }}">
-                        <p class="heading">{{ hackathon.heading }}</p>
+                    <div>
+                        <p class="website">{{ website }}</p>
+                        
+                            <p class="heading">{{ hackathon.heading }}</p>
+                        
+                    </div>
+                    <div class="tags">
+                        {% if hackathon.mode %}
+                            <span class="mode">{{ hackathon.mode }}</span>
+                        {% endif %}
+                        
+                        {% if hackathon.date %}
+                            <span class="date">{{ hackathon.date }}</span>
+                        {% endif %}
+                    </div>
                     </a>
+                    <div class="apply-button">
+                        <a href="{{ hackathon.link }}" target="_blank">Apply Now</a>
+                    </div>
                 </div>
-                <div class="tags">
-                    {% if hackathon.mode %}
-                        <span class="mode">{{ hackathon.mode }}</span>
-                    {% endif %}
-                    
-                    {% if hackathon.date %}
-                        <span class="date">{{ hackathon.date }}</span>
-                    {% endif %}
-                </div>
-            </div>
+            
         {% endfor %}
     
 
@@ -72,6 +112,24 @@
             {% endif %}
         </span>
     </div>
+
+    <script>
+        const words = ["DEVFOLIO", "UNSTOP", "GFG"];
+        let index = 0;
+    
+        function changeText() {
+            const textElement = document.getElementById("changing-text");
+            textElement.style.opacity = 0;
+    
+            setTimeout(() => {
+                textElement.innerText = words[index];
+                textElement.style.opacity = 1;
+                index = (index + 1) % words.length;
+            }, 300); 
+        }
+    
+        setInterval(changeText, 2000);
+    </script>
 
     
 </body>
