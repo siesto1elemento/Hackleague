@@ -520,7 +520,7 @@ a:has(.heading){
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-120px * 4)); /* Move by half the total width */
+        transform: translateX(calc(-120px * 4)); /* Move by exactly one set of logos */
     }
 }
 
